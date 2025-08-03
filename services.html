@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services | Flyclic</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: {
+                            50: '#f0f9ff',
+                            100: '#e0f2fe',
+                            200: '#bae6fd',
+                            300: '#7dd3fc',
+                            400: '#38bdf8',
+                            500: '#0ea5e9',
+                            600: '#0284c7',
+                            700: '#0369a1',
+                            800: '#075985',
+                            900: '#0c4a6e',
+                        },
+                        secondary: {
+                            500: '#f59e0b',
+                        }
+                    },
+                    fontFamily: {
+                        'sans': ['"Open Sans"', 'sans-serif'],
+                        'display': ['"Montserrat"', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Open+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body class="font-sans bg-white text-gray-800 antialiased">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-sm sticky top-0 z-50 backdrop-filter backdrop-blur-lg bg-opacity-90">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-20 items-center">
+                                 <div class="flex items-center">
+                     <a href="index.html" class="flex-shrink-0 flex items-center hover:opacity-80 transition duration-300">
+                         <img src="logo.jpg" alt="Flyclic Logo" class="h-8 w-8 mr-3">
+                         <span class="text-2xl font-bold text-primary-600 font-display">Flyclic</span>
+                     </a>
+                 </div>
+                <div class="hidden lg:flex lg:space-x-8">
+                    <a href="index.html" class="border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium font-display">Accueil</a>
+                    <a href="about.html" class="border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium font-display">À propos</a>
+                    <a href="services.html" class="border-primary-500 text-gray-900 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium font-display">Services</a>
+                    <a href="contact.html" class="border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium font-display">Contact</a>
+                </div>
+                <div class="-mr-2 flex items-center lg:hidden">
+                    <button type="button" class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-primary-500" aria-expanded="false">
+                        <span class="sr-only">Ouvrir le menu</span>
+                        <i class="fas fa-bars"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <div class="bg-gradient-to-br from-primary-50 to-primary-100 py-24">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center">
+                <h1 class="text-4xl font-extrabold tracking-tight text-gray-900 sm:text-5xl md:text-6xl font-display">
+                    <span class="block">Nos Services</span>
+                    <span class="block text-primary-600">Complets</span>
+                </h1>
+                <p class="mt-4 max-w-md mx-auto text-lg text-gray-600 sm:text-xl md:mt-6 md:max-w-3xl">
+                    Tout ce dont vous avez besoin pour planifier votre voyage parfait
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Services Grid -->
+    <div class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Service 1 -->
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden border border-gray-100 hover:shadow-xl transition duration-300">
+                    <div class="p-6">
+                        <div class="flex items-center justify-center h-16 w-16 rounded-full bg-primary-500 text-white mb-4">
+                            <i class="fas fa-search text-2xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900 font-display mb-3">Comparaison de Prix</h3>
+                        <p class="text-gray-600 mb-4">
+                            Comparez les prix de plus de 200 compagnies aériennes en temps réel. Trouvez les meilleures offres pour votre destination.
+                        </p>
+                        <ul class="text-sm text-gray-600 space-y-2 mb-6">
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-primary-500 mr-2"></i>
+                                Prix actualisés en temps réel
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-primary-500 mr-2"></i>
+                                Plus de 200 compagnies
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-primary-500 mr-2"></i>
+                                Filtres avancés
+                            </li>
+                        </ul>
+                        <a href="#" class="inline-flex items-center text-primary-600 hover:text-primary-700 font-display">
+                            En savoir plus <i class="fas fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Service 2 -->
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden border border-gray-100 hover:shadow-xl transition duration-300">
+                    <div class="p-6">
+                        <div class="flex items-center justify-center h-16 w-16 rounded-full bg-primary-500 text-white mb-4">
+                            <i class="fas fa-bell text-2xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900 font-display mb-3">Alertes Prix</h3>
+                        <p class="text-gray-600 mb-4">
+                            Recevez des notifications personnalisées quand les prix baissent sur vos trajets favoris.
+                        </p>
+                        <ul class="text-sm text-gray-600 space-y-2 mb-6">
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-primary-500 mr-2"></i>
+                                Alertes personnalisées
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-primary-500 mr-2"></i>
+                                Notifications par email
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-primary-500 mr-2"></i>
+                                Seuils de prix configurables
+                            </li>
+                        </ul>
+                        <a href="#" class="inline-flex items-center text-primary-600 hover:text-primary-700 font-display">
+                            Configurer <i class="fas fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Service 3 -->
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden border border-gray-100 hover:shadow-xl transition duration-300">
+                    <div class="p-6">
+                        <div class="flex items-center justify-center h-16 w-16 rounded-full bg-primary-500 text-white mb-4">
+                            <i class="fas fa-chart-line text-2xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900 font-display mb-3">Statistiques & Tendances</h3>
+                        <p class="text-gray-600 mb-4">
+                            Analysez l'évolution des prix pour choisir le meilleur moment pour réserver votre vol.
+                        </p>
+                        <ul class="text-sm text-gray-600 space-y-2 mb-6">
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-primary-500 mr-2"></i>
+                                Graphiques interactifs
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-primary-500 mr-2"></i>
+                                Historique des prix
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-primary-500 mr-2"></i>
+                                Prédictions de prix
+                            </li>
+                        </ul>
+                        <a href="#" class="inline-flex items-center text-primary-600 hover:text-primary-700 font-display">
+                            Voir les tendances <i class="fas fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Service 4 -->
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden border border-gray-100 hover:shadow-xl transition duration-300">
+                    <div class="p-6">
+                        <div class="flex items-center justify-center h-16 w-16 rounded-full bg-primary-500 text-white mb-4">
+                            <i class="fas fa-lightbulb text-2xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900 font-display mb-3">Conseils Voyage</h3>
+                        <p class="text-gray-600 mb-4">
+                            Découvrez les meilleures astuces et conseils de nos experts pour voyager malin et économiser.
+                        </p>
+                        <ul class="text-sm text-gray-600 space-y-2 mb-6">
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-primary-500 mr-2"></i>
+                                Guides de destination
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-primary-500 mr-2"></i>
+                                Conseils d'experts
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-primary-500 mr-2"></i>
+                                Articles de blog
+                            </li>
+                        </ul>
+                        <a href="#" class="inline-flex items-center text-primary-600 hover:text-primary-700 font-display">
+                            Lire les conseils <i class="fas fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Service 5 -->
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden border border-gray-100 hover:shadow-xl transition duration-300">
+                    <div class="p-6">
+                        <div class="flex items-center justify-center h-16 w-16 rounded-full bg-primary-500 text-white mb-4">
+                            <i class="fas fa-shield-alt text-2xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900 font-display mb-3">Réservation Sécurisée</h3>
+                        <p class="text-gray-600 mb-4">
+                            Réservez directement avec les compagnies aériennes via nos liens sécurisés et protégés.
+                        </p>
+                        <ul class="text-sm text-gray-600 space-y-2 mb-6">
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-primary-500 mr-2"></i>
+                                Paiements sécurisés
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-primary-500 mr-2"></i>
+                                Protection des données
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-primary-500 mr-2"></i>
+                                Support 24/7
+                            </li>
+                        </ul>
+                        <a href="#" class="inline-flex items-center text-primary-600 hover:text-primary-700 font-display">
+                            Réserver maintenant <i class="fas fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Service 6 -->
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden border border-gray-100 hover:shadow-xl transition duration-300">
+                    <div class="p-6">
+                        <div class="flex items-center justify-center h-16 w-16 rounded-full bg-primary-500 text-white mb-4">
+                            <i class="fas fa-mobile-alt text-2xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900 font-display mb-3">Application Mobile</h3>
+                        <p class="text-gray-600 mb-4">
+                            Accédez à tous nos services depuis votre smartphone avec notre application mobile.
+                        </p>
+                        <ul class="text-sm text-gray-600 space-y-2 mb-6">
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-primary-500 mr-2"></i>
+                                Recherche rapide
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-primary-500 mr-2"></i>
+                                Notifications push
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-primary-500 mr-2"></i>
+                                Interface intuitive
+                            </li>
+                        </ul>
+                        <a href="#" class="inline-flex items-center text-primary-600 hover:text-primary-700 font-display">
+                            Télécharger <i class="fas fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- CTA Section -->
+    <div class="bg-gradient-to-r from-primary-600 to-primary-800">
+        <div class="max-w-4xl mx-auto text-center py-16 px-4 sm:py-20 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-extrabold text-white sm:text-4xl font-display">
+                <span class="block">Prêt à commencer ?</span>
+                <span class="block">Essayez nos services dès maintenant</span>
+            </h2>
+            <p class="mt-4 text-lg leading-6 text-primary-100">
+                Rejoignez des millions de voyageurs qui font confiance à Flyclic pour leurs voyages.
+            </p>
+            <div class="mt-8 flex justify-center space-x-4">
+                <a href="index.html" class="inline-flex items-center justify-center px-6 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-primary-600 bg-white hover:bg-gray-50 font-display transition duration-300 transform hover:scale-105">
+                    Commencer la recherche
+                </a>
+                <a href="contact.html" class="inline-flex items-center justify-center px-6 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-primary-500 bg-opacity-60 hover:bg-opacity-70 font-display transition duration-300">
+                    Nous contacter
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900">
+        <div class="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:py-16 lg:px-8">
+            <div class="xl:grid xl:grid-cols-3 xl:gap-8">
+                <div class="space-y-8 xl:col-span-1">
+                    <div class="flex items-center">
+                        <img src="images/logo.png" alt="VolComparaison Logo" class="h-8 w-8 mr-3">
+                        <span class="text-2xl font-bold text-white font-display">VolComparaison</span>
+                    </div>
+                    <p class="text-gray-300 text-base">
+                        Votre comparateur de vols préféré depuis 2020.
+                    </p>
+                    <div class="flex space-x-6">
+                        <a href="https://www.facebook.com/flyclic" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-white transition duration-300">
+                            <span class="sr-only">Facebook</span>
+                            <i class="fab fa-facebook-f text-xl"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition duration-300">
+                            <span class="sr-only">Twitter</span>
+                            <i class="fab fa-twitter text-xl"></i>
+                        </a>
+                        <a href="https://www.instagram.com/flyclic/" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-white transition duration-300">
+                            <span class="sr-only">Instagram</span>
+                            <i class="fab fa-instagram text-xl"></i>
+                        </a>
+                        <a href="https://www.tiktok.com/@flyclic?is_from_webapp=1&sender_device=pc" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-white transition duration-300">
+                            <span class="sr-only">TikTok</span>
+                            <i class="fab fa-tiktok text-xl"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="mt-12 grid grid-cols-2 gap-8 xl:mt-0 xl:col-span-2">
+                    <div class="md:grid md:grid-cols-2 md:gap-8">
+                        <div>
+                            <h3 class="text-sm font-semibold text-gray-300 tracking-wider uppercase font-display">
+                                Entreprise
+                            </h3>
+                            <ul class="mt-4 space-y-4">
+                                <li>
+                                    <a href="about.html" class="text-base text-gray-400 hover:text-white transition duration-300">
+                                        À propos
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="text-base text-gray-400 hover:text-white transition duration-300">
+                                        Blog
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="text-base text-gray-400 hover:text-white transition duration-300">
+                                        Carrières
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="text-base text-gray-400 hover:text-white transition duration-300">
+                                        Presse
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="mt-12 md:mt-0">
+                            <h3 class="text-sm font-semibold text-gray-300 tracking-wider uppercase font-display">
+                                Légal
+                            </h3>
+                            <ul class="mt-4 space-y-4">
+                                <li>
+                                    <a href="#" class="text-base text-gray-400 hover:text-white transition duration-300">
+                                        Confidentialité
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="text-base text-gray-400 hover:text-white transition duration-300">
+                                        Conditions
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="text-base text-gray-400 hover:text-white transition duration-300">
+                                        Politique cookies
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="md:grid md:grid-cols-2 md:gap-8">
+                        <div>
+                            <h3 class="text-sm font-semibold text-gray-300 tracking-wider uppercase font-display">
+                                Ressources
+                            </h3>
+                            <ul class="mt-4 space-y-4">
+                                <li>
+                                    <a href="#" class="text-base text-gray-400 hover:text-white transition duration-300">
+                                        Centre d'aide
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="text-base text-gray-400 hover:text-white transition duration-300">
+                                        Guides voyage
+                                    </li>
+                                <li>
+                                    <a href="#" class="text-base text-gray-400 hover:text-white transition duration-300">
+                                        Avis compagnies
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="text-base text-gray-400 hover:text-white transition duration-300">
+                                        FAQ
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="mt-12 md:mt-0">
+                            <h3 class="text-sm font-semibold text-gray-300 tracking-wider uppercase font-display">
+                                Contact
+                            </h3>
+                            <ul class="mt-4 space-y-4">
+                                <li class="flex items-start">
+                                    <i class="fas fa-envelope text-gray-400 mt-1 mr-3"></i>
+                                    <a href="mailto:contact@volcomparaison.com" class="text-base text-gray-400 hover:text-white transition duration-300">
+                                        contact@volcomparaison.com
+                                    </a>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-phone-alt text-gray-400 mt-1 mr-3"></i>
+                                    <a href="tel:+213550768244" class="text-base text-gray-400 hover:text-white transition duration-300">
+                                        +213 550 76 82 44
+                                    </a>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-map-marker-alt text-gray-400 mt-1 mr-3"></i>
+                                    <span class="text-base text-gray-400">
+                                        الجزار العاصمة<br>Algiers, Algeria
+                                    </span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="mt-12 border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-base text-gray-400 text-center md:text-left">
+                    &copy; 2023 VolComparaison. Tous droits réservés.
+                </p>
+                <div class="mt-4 md:mt-0 flex space-x-6">
+                    <a href="#" class="text-gray-400 hover:text-white transition duration-300">
+                        <span class="sr-only">App Store</span>
+                        <i class="fab fa-app-store-ios text-2xl"></i>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-white transition duration-300">
+                        <span class="sr-only">Google Play</span>
+                        <i class="fab fa-google-play text-2xl"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html> 
