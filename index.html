@@ -47,6 +47,52 @@
             transform: translateY(-5px);
             box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
         }
+        
+        /* Extra small screen optimizations */
+        @media (max-width: 480px) {
+            .xs\:hidden {
+                display: none !important;
+            }
+            
+            .xs\:inline {
+                display: inline !important;
+            }
+            
+            /* Ensure navbar elements don't overlap */
+            nav .flex.justify-between {
+                gap: 0.5rem;
+            }
+            
+            /* Reduce padding on very small screens */
+            nav .max-w-7xl {
+                padding-left: 0.75rem;
+                padding-right: 0.75rem;
+            }
+            
+            /* Make navbar elements more compact */
+            nav .flex.items-center.space-x-1 {
+                gap: 0.125rem;
+            }
+            
+            /* Ensure language button doesn't overflow */
+            nav #language-button {
+                padding: 0.375rem;
+                font-size: 0.75rem;
+            }
+            
+            /* Ensure login button doesn't overflow */
+            nav #login-button {
+                padding: 0.375rem 0.5rem;
+                font-size: 0.75rem;
+            }
+        }
+        
+        /* Ensure minimum spacing between navbar elements */
+        @media (max-width: 640px) {
+            nav .flex.items-center.space-x-1 {
+                gap: 0.25rem;
+            }
+        }
     </style>
 </head>
 <body class="font-sans bg-white text-gray-800 antialiased">
@@ -55,17 +101,17 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between h-16 sm:h-20 items-center">
                 <!-- Logo -->
-                                 <div class="flex items-center">
-                     <a href="index.html" class="flex-shrink-0 flex items-center hover:opacity-80 transition duration-300">
-                           <img src="logo.png" alt="Choffly Logo" class="h-14 w-14 sm:h-16 sm:w-16 mr-2 sm:mr-3">
-                           <span class="text-lg sm:text-2xl font-bold text-primary-600 font-display">Choffly</span>
-                     </a>
-                 </div>
+                <div class="flex items-center">
+                    <a href="index.html" class="flex-shrink-0 flex items-center hover:opacity-80 transition duration-300">
+                        <img src="logo.png" alt="Choffly Logo" class="h-12 w-12 sm:h-14 sm:w-14 lg:h-16 lg:w-16 mr-2 sm:mr-3">
+                        <span class="text-base sm:text-lg lg:text-2xl font-bold text-primary-600 font-display">Choffly</span>
+                    </a>
+                </div>
                 
                 <!-- Right side buttons -->
-                <div class="flex items-center space-x-2 sm:space-x-4">
+                <div class="flex items-center space-x-1 sm:space-x-2 lg:space-x-4 min-w-0">
                     <!-- Language Selection -->
-                    <div class="relative">
+                    <div class="relative flex-shrink-0">
                         <button type="button" id="language-button" class="inline-flex items-center justify-center p-2 rounded-md text-gray-600 hover:text-gray-800 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-primary-500 transition duration-300">
                             <i class="fas fa-globe mr-1 sm:mr-2"></i>
                             <span class="text-xs sm:text-sm font-medium">FR</span>
@@ -76,22 +122,23 @@
                                 <button class="language-option block w-full text-left px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 transition duration-200" data-lang="ar">العربية</button>
                                 <button class="language-option block w-full text-left px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 transition duration-200" data-lang="en">English</button>
                                 <button class="language-option block w-full text-left px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 transition duration-200" data-lang="fr">Français</button>
-                </div>
+                            </div>
                         </div>
                     </div>
                     
-                    <!-- Login Button -->
-                    <button type="button" id="login-button" class="inline-flex items-center justify-center px-3 sm:px-4 py-2 rounded-md text-white bg-primary-600 hover:bg-primary-700 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-primary-500 transition duration-300">
+                    <!-- Login Button - Smaller on mobile -->
+                    <button type="button" id="login-button" class="inline-flex items-center justify-center px-2 sm:px-3 lg:px-4 py-2 rounded-md text-white bg-primary-600 hover:bg-primary-700 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-primary-500 transition duration-300 flex-shrink-0">
                         <i class="fas fa-sign-in-alt mr-1 sm:mr-2"></i>
-                        <span class="text-xs sm:text-sm font-medium">Connexion</span>
+                        <span class="text-xs sm:text-sm font-medium hidden xs:inline">Connexion</span>
+                        <span class="text-xs font-medium xs:hidden">Login</span>
                     </button>
                     
                     <!-- Hamburger Menu Button -->
                     <button type="button" id="mobile-menu-button" class="inline-flex items-center justify-center p-2 rounded-md text-gray-600 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-primary-500 transition duration-300" aria-expanded="false">
-                         <span class="sr-only">Ouvrir le menu</span>
+                        <span class="sr-only">Ouvrir le menu</span>
                         <i class="fas fa-bars text-lg sm:text-xl" id="menu-icon"></i>
-                     </button>
-                 </div>
+                    </button>
+                </div>
              </div>
              
              <!-- Mobile menu -->
@@ -157,7 +204,7 @@
         </div>
     </div>
 
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-4">
+            <div id="main-search-fields" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-4">
                 <div>
                     <label for="from" class="block text-sm font-medium text-gray-700 font-display">De</label>
                     <div class="mt-1 relative rounded-md shadow-sm">
@@ -377,6 +424,118 @@
                         </div>
                     </div>
                     
+                    <!-- Passengers Selection for Multi-destination -->
+                    <div class="mt-4">
+                        <label class="block text-sm font-medium text-gray-700 font-display">
+                            <i class="fas fa-users mr-2"></i>Passagers
+                        </label>
+                        <div class="mt-1 relative">
+                            <button type="button" id="multi-passengers-dropdown" class="w-full flex items-center justify-between bg-white border border-gray-300 rounded-md px-3 py-3 text-left focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-primary-500">
+                                <span id="multi-passengers-display" class="text-gray-900 font-medium">1 Adulte</span>
+                                <i class="fas fa-chevron-down text-gray-500"></i>
+                            </button>
+                            
+                            <!-- Passenger Selection Dropdown for Multi-destination -->
+                            <div id="multi-passengers-dropdown-menu" class="hidden absolute z-50 w-80 mt-1 bg-white border border-gray-200 rounded-xl shadow-2xl">
+                                <!-- Header -->
+                                <div class="px-6 py-4 border-b border-gray-100 bg-gradient-to-r from-primary-50 to-blue-50 rounded-t-xl">
+                                    <h3 class="text-lg font-bold text-gray-900">Passagers</h3>
+                                    <p class="text-sm text-gray-600 mt-1">Sélectionnez le nombre de voyageurs</p>
+                                </div>
+                                
+                                <!-- Passenger Categories -->
+                                <div class="p-4 space-y-3">
+                                    <!-- Adults -->
+                                    <div class="bg-white border border-gray-100 rounded-lg p-4 shadow-sm hover:shadow-md transition-shadow">
+                                        <div class="flex items-center justify-between">
+                                            <div class="flex items-center space-x-3">
+                                                <div class="w-8 h-8 bg-primary-500 rounded-full flex items-center justify-center">
+                                                    <i class="fas fa-user text-white text-xs"></i>
+                                                </div>
+                                                <div>
+                                                    <h4 class="text-sm font-semibold text-gray-900">Adultes</h4>
+                                                    <p class="text-xs text-gray-500">12 ans et plus</p>
+                                                </div>
+                                            </div>
+                                            <div class="flex items-center space-x-2">
+                                                <button type="button" id="multi-decrease-adults" class="w-7 h-7 bg-gray-100 border border-gray-200 rounded-md flex items-center justify-center text-gray-600 hover:bg-gray-200 hover:border-gray-300 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-1 transition-all duration-150 disabled:opacity-40 disabled:cursor-not-allowed">
+                                                    <i class="fas fa-minus text-xs"></i>
+                                                </button>
+                                                <span id="multi-adults-count" class="w-8 text-center text-sm font-bold text-gray-900">1</span>
+                                                <button type="button" id="multi-increase-adults" class="w-7 h-7 bg-gray-100 border border-gray-200 rounded-md flex items-center justify-center text-gray-600 hover:bg-gray-200 hover:border-gray-300 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-1 transition-all duration-150">
+                                                    <i class="fas fa-plus text-xs"></i>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    <!-- Children -->
+                                    <div class="bg-white border border-gray-100 rounded-lg p-4 shadow-sm hover:shadow-md transition-shadow">
+                                        <div class="flex items-center justify-between">
+                                            <div class="flex items-center space-x-3">
+                                                <div class="w-8 h-8 bg-blue-500 rounded-full flex items-center justify-center">
+                                                    <i class="fas fa-child text-white text-xs"></i>
+                                                </div>
+                                                <div>
+                                                    <h4 class="text-sm font-semibold text-gray-900">Enfants</h4>
+                                                    <p class="text-xs text-gray-500">2 à 12 ans</p>
+                                                </div>
+                                            </div>
+                                            <div class="flex items-center space-x-2">
+                                                <button type="button" id="multi-decrease-children" class="w-7 h-7 bg-gray-100 border border-gray-200 rounded-md flex items-center justify-center text-gray-600 hover:bg-gray-200 hover:border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-1 transition-all duration-150 disabled:opacity-40 disabled:cursor-not-allowed">
+                                                    <i class="fas fa-minus text-xs"></i>
+                                                </button>
+                                                <span id="multi-children-count" class="w-8 text-center text-sm font-bold text-gray-900">0</span>
+                                                <button type="button" id="multi-increase-children" class="w-7 h-7 bg-gray-100 border border-gray-200 rounded-md flex items-center justify-center text-gray-600 hover:bg-gray-200 hover:border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-1 transition-all duration-150">
+                                                    <i class="fas fa-plus text-xs"></i>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    <!-- Infants -->
+                                    <div class="bg-white border border-gray-100 rounded-lg p-4 shadow-sm hover:shadow-md transition-shadow">
+                                        <div class="flex items-center justify-between">
+                                            <div class="flex items-center space-x-3">
+                                                <div class="w-8 h-8 bg-pink-500 rounded-full flex items-center justify-center">
+                                                    <i class="fas fa-baby text-white text-xs"></i>
+                                                </div>
+                                                <div>
+                                                    <h4 class="text-sm font-semibold text-gray-900">Bébés</h4>
+                                                    <p class="text-xs text-gray-500">Moins de 2 ans</p>
+                                                </div>
+                                            </div>
+                                            <div class="flex items-center space-x-2">
+                                                <button type="button" id="multi-decrease-infants" class="w-7 h-7 bg-gray-100 border border-gray-200 rounded-md flex items-center justify-center text-gray-600 hover:bg-gray-200 hover:border-gray-300 focus:outline-none focus:ring-2 focus:ring-pink-500 focus:ring-offset-1 transition-all duration-150 disabled:opacity-40 disabled:cursor-not-allowed">
+                                                    <i class="fas fa-minus text-xs"></i>
+                                                </button>
+                                                <span id="multi-infants-count" class="w-8 text-center text-sm font-bold text-gray-900">0</span>
+                                                <button type="button" id="multi-increase-infants" class="w-7 h-7 bg-gray-100 border border-gray-200 rounded-md flex items-center justify-center text-gray-600 hover:bg-gray-200 hover:border-gray-300 focus:outline-none focus:ring-2 focus:ring-pink-500 focus:ring-offset-1 transition-all duration-150">
+                                                    <i class="fas fa-plus text-xs"></i>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <!-- Footer -->
+                                <div class="px-6 py-4 border-t border-gray-100 bg-gray-50 rounded-b-xl">
+                                    <div class="flex items-center justify-between mb-4">
+                                        <span class="text-sm font-medium text-gray-700">Total:</span>
+                                        <span id="multi-total-passengers" class="text-lg font-bold text-primary-600">1 passager</span>
+                                    </div>
+                                    <div class="flex space-x-3">
+                                        <button type="button" id="multi-cancel-passengers" class="flex-1 px-4 py-2 text-sm font-medium text-gray-700 bg-white border border-gray-300 rounded-md hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-1 transition duration-200">
+                                            Annuler
+                                        </button>
+                                        <button type="button" id="multi-confirm-passengers" class="flex-1 px-4 py-2 text-sm font-medium text-white bg-primary-600 border border-transparent rounded-md hover:bg-primary-700 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-1 transition duration-200">
+                                            Confirmer
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
 
                 </div>
             </div>
@@ -1191,6 +1350,10 @@
                        roundTripBtn.classList.remove('text-gray-700', 'hover:text-gray-900');
                        roundTripBtn.classList.add('bg-primary-600', 'text-white');
                        
+                       // Show main search fields
+                       const mainSearchFields = document.getElementById('main-search-fields');
+                       mainSearchFields.style.display = 'grid';
+                       
                        // Show return field
                        returnFieldContainer.style.display = 'block';
                        returnInput.required = true;
@@ -1210,6 +1373,10 @@
                        resetButtonStyles();
                        oneWayBtn.classList.remove('text-gray-700', 'hover:text-gray-900');
                        oneWayBtn.classList.add('bg-primary-600', 'text-white');
+                       
+                       // Show main search fields
+                       const mainSearchFields = document.getElementById('main-search-fields');
+                       mainSearchFields.style.display = 'grid';
                        
                        // Hide return field
                        returnFieldContainer.style.display = 'none';
@@ -1232,10 +1399,9 @@
                        multiDestinationBtn.classList.remove('text-gray-700', 'hover:text-gray-900');
                        multiDestinationBtn.classList.add('bg-primary-600', 'text-white');
                        
-                       // Hide return field for multi-destination
-                       returnFieldContainer.style.display = 'none';
-                       returnInput.required = false;
-                       returnInput.value = '';
+                       // Hide main search fields for multi-destination
+                       const mainSearchFields = document.getElementById('main-search-fields');
+                       mainSearchFields.style.display = 'none';
                        
                        // Show multi-destination fields
                        const multiDestinationFields = document.getElementById('multi-destination-fields');
@@ -1448,6 +1614,178 @@
                
                // Initialize display
                updateDisplay();
+           });
+
+           // Multi-destination passengers functionality
+           document.addEventListener('DOMContentLoaded', function() {
+               const multiPassengersDropdown = document.getElementById('multi-passengers-dropdown');
+               const multiPassengersDropdownMenu = document.getElementById('multi-passengers-dropdown-menu');
+               const multiPassengersDisplay = document.getElementById('multi-passengers-display');
+               
+               // Multi-destination passenger counts
+               let multiAdultsCount = 1;
+               let multiChildrenCount = 0;
+               let multiInfantsCount = 0;
+               
+               // Multi-destination elements
+               const multiAdultsCountSpan = document.getElementById('multi-adults-count');
+               const multiChildrenCountSpan = document.getElementById('multi-children-count');
+               const multiInfantsCountSpan = document.getElementById('multi-infants-count');
+               
+               const multiDecreaseAdults = document.getElementById('multi-decrease-adults');
+               const multiIncreaseAdults = document.getElementById('multi-increase-adults');
+               const multiDecreaseChildren = document.getElementById('multi-decrease-children');
+               const multiIncreaseChildren = document.getElementById('multi-increase-children');
+               const multiDecreaseInfants = document.getElementById('multi-decrease-infants');
+               const multiIncreaseInfants = document.getElementById('multi-increase-infants');
+               
+               // Toggle multi-destination dropdown
+               multiPassengersDropdown.addEventListener('click', function(e) {
+                   e.preventDefault();
+                   multiPassengersDropdownMenu.classList.toggle('hidden');
+               });
+               
+               // Close multi-destination dropdown when clicking outside
+               document.addEventListener('click', function(e) {
+                   if (!multiPassengersDropdown.contains(e.target) && !multiPassengersDropdownMenu.contains(e.target)) {
+                       multiPassengersDropdownMenu.classList.add('hidden');
+                   }
+               });
+               
+               // Update multi-destination display text and total
+               function updateMultiDisplay() {
+                   let displayText = '';
+                   if (multiAdultsCount > 0) {
+                       displayText += multiAdultsCount + (multiAdultsCount === 1 ? ' Adulte' : ' Adultes');
+                   }
+                   if (multiChildrenCount > 0) {
+                       if (displayText) displayText += ', ';
+                       displayText += multiChildrenCount + (multiChildrenCount === 1 ? ' Enfant' : ' Enfants');
+                   }
+                   if (multiInfantsCount > 0) {
+                       if (displayText) displayText += ', ';
+                       displayText += multiInfantsCount + (multiInfantsCount === 1 ? ' Bébé' : ' Bébés');
+                   }
+                   multiPassengersDisplay.textContent = displayText || '1 Adulte';
+                   
+                   // Update total passengers with proper formatting
+                   const totalPassengers = multiAdultsCount + multiChildrenCount + multiInfantsCount;
+                   const totalElement = document.getElementById('multi-total-passengers');
+                   if (totalPassengers === 1) {
+                       totalElement.textContent = '1 passager';
+                   } else {
+                       totalElement.textContent = totalPassengers + ' passagers';
+                   }
+                   
+                   // Update button states
+                   updateMultiButtonStates();
+               }
+               
+               // Update multi-destination button states (disable when at min/max)
+               function updateMultiButtonStates() {
+                   // Adults (min 1, max 9)
+                   multiDecreaseAdults.disabled = multiAdultsCount <= 1;
+                   multiIncreaseAdults.disabled = multiAdultsCount >= 9;
+                   
+                   // Children (min 0, max 9)
+                   multiDecreaseChildren.disabled = multiChildrenCount <= 0;
+                   multiIncreaseChildren.disabled = multiChildrenCount >= 9;
+                   
+                   // Infants (min 0, max 9)
+                   multiDecreaseInfants.disabled = multiInfantsCount <= 0;
+                   multiIncreaseInfants.disabled = multiInfantsCount >= 9;
+               }
+               
+               // Multi-destination adults controls
+               multiDecreaseAdults.addEventListener('click', function() {
+                   if (multiAdultsCount > 1) {
+                       multiAdultsCount--;
+                       multiAdultsCountSpan.textContent = multiAdultsCount;
+                       updateMultiDisplay();
+                   }
+               });
+               
+               multiIncreaseAdults.addEventListener('click', function() {
+                   if (multiAdultsCount < 9) {
+                       multiAdultsCount++;
+                       multiAdultsCountSpan.textContent = multiAdultsCount;
+                       updateMultiDisplay();
+                   }
+               });
+               
+               // Multi-destination children controls
+               multiDecreaseChildren.addEventListener('click', function() {
+                   if (multiChildrenCount > 0) {
+                       multiChildrenCount--;
+                       multiChildrenCountSpan.textContent = multiChildrenCount;
+                       updateMultiDisplay();
+                   }
+               });
+               
+               multiIncreaseChildren.addEventListener('click', function() {
+                   if (multiChildrenCount < 9) {
+                       multiChildrenCount++;
+                       multiChildrenCountSpan.textContent = multiChildrenCount;
+                       updateMultiDisplay();
+                   }
+               });
+               
+               // Multi-destination infants controls
+               multiDecreaseInfants.addEventListener('click', function() {
+                   if (multiInfantsCount > 0) {
+                       multiInfantsCount--;
+                       multiInfantsCountSpan.textContent = multiInfantsCount;
+                       updateMultiDisplay();
+                   }
+               });
+               
+               multiIncreaseInfants.addEventListener('click', function() {
+                   if (multiInfantsCount < 9) {
+                       multiInfantsCount++;
+                       multiInfantsCountSpan.textContent = multiInfantsCount;
+                       updateMultiDisplay();
+                   }
+               });
+               
+               // Multi-destination confirmation and Cancel buttons
+               const multiConfirmPassengers = document.getElementById('multi-confirm-passengers');
+               const multiCancelPassengers = document.getElementById('multi-cancel-passengers');
+               
+               // Store original values for cancel functionality
+               let multiOriginalAdultsCount = 1;
+               let multiOriginalChildrenCount = 0;
+               let multiOriginalInfantsCount = 0;
+               
+               // Multi-destination confirm button - apply changes and close dropdown
+               multiConfirmPassengers.addEventListener('click', function() {
+                   // Update original values to current values
+                   multiOriginalAdultsCount = multiAdultsCount;
+                   multiOriginalChildrenCount = multiChildrenCount;
+                   multiOriginalInfantsCount = multiInfantsCount;
+                   
+                   // Close dropdown
+                   multiPassengersDropdownMenu.classList.add('hidden');
+               });
+               
+               // Multi-destination cancel button - revert to original values and close dropdown
+               multiCancelPassengers.addEventListener('click', function() {
+                   // Revert to original values
+                   multiAdultsCount = multiOriginalAdultsCount;
+                   multiChildrenCount = multiOriginalChildrenCount;
+                   multiInfantsCount = multiOriginalInfantsCount;
+                   
+                   // Update display
+                   multiAdultsCountSpan.textContent = multiAdultsCount;
+                   multiChildrenCountSpan.textContent = multiChildrenCount;
+                   multiInfantsCountSpan.textContent = multiInfantsCount;
+                   updateMultiDisplay();
+                   
+                   // Close dropdown
+                   multiPassengersDropdownMenu.classList.add('hidden');
+               });
+               
+               // Initialize multi-destination display
+               updateMultiDisplay();
            });
 
                   // Login invitation notification functionality
