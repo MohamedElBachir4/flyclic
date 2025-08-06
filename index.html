@@ -55,12 +55,12 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between h-16 sm:h-20 items-center">
                 <!-- Logo -->
-                <div class="flex items-center">
-                    <a href="index.html" class="flex-shrink-0 flex items-center hover:opacity-80 transition duration-300">
-                        <img src="logo.png" alt="Choffly Logo" class="h-6 w-6 sm:h-8 sm:w-8 mr-2 sm:mr-3">
+                                 <div class="flex items-center">
+                     <a href="index.html" class="flex-shrink-0 flex items-center hover:opacity-80 transition duration-300">
+                        <img src="logo.png" alt="Choffly Logo" class="h-9 w-9 sm:h-11 sm:w-11 mr-2 sm:mr-3">
                         <span class="text-lg sm:text-2xl font-bold text-primary-600 font-display">Choffly</span>
-                    </a>
-                </div>
+                     </a>
+                 </div>
                 
                 <!-- Right side buttons -->
                 <div class="flex items-center space-x-2 sm:space-x-4">
@@ -76,7 +76,7 @@
                                 <button class="language-option block w-full text-left px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 transition duration-200" data-lang="ar">العربية</button>
                                 <button class="language-option block w-full text-left px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 transition duration-200" data-lang="en">English</button>
                                 <button class="language-option block w-full text-left px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 transition duration-200" data-lang="fr">Français</button>
-                            </div>
+                </div>
                         </div>
                     </div>
                     
@@ -87,26 +87,26 @@
                     </button>
                     
                     <!-- Hamburger Menu Button -->
-                    <button type="button" id="mobile-menu-button" class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-primary-500 transition duration-300" aria-expanded="false">
-                        <span class="sr-only">Ouvrir le menu</span>
+                    <button type="button" id="mobile-menu-button" class="inline-flex items-center justify-center p-2 rounded-md text-gray-600 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-primary-500 transition duration-300" aria-expanded="false">
+                         <span class="sr-only">Ouvrir le menu</span>
                         <i class="fas fa-bars text-lg sm:text-xl" id="menu-icon"></i>
-                    </button>
-                </div>
-            </div>
-            
-            <!-- Mobile menu -->
+                     </button>
+                 </div>
+             </div>
+             
+             <!-- Mobile menu -->
             <div class="hidden" id="mobile-menu">
                 <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-white border-t border-gray-200 shadow-lg">
                     <a href="index.html" class="border-primary-500 text-gray-900 block px-3 py-3 rounded-md text-base font-medium font-display hover:bg-gray-50 transition duration-200">Accueil</a>
                     <a href="about.html" class="border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700 block px-3 py-3 rounded-md text-base font-medium font-display hover:bg-gray-50 transition duration-200">À propos</a>
                     <a href="services.html" class="border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700 block px-3 py-3 rounded-md text-base font-medium font-display hover:bg-gray-50 transition duration-200">Services</a>
                     <a href="contact.html" class="border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700 block px-3 py-3 rounded-md text-base font-medium font-display hover:bg-gray-50 transition duration-200">Contact</a>
-                </div>
+             </div>
             </div>
         </div>
     </nav>
 
-            <!-- Hero Section -->
+    <!-- Hero Section -->
         <div class="relative bg-center bg-no-repeat py-32 transition-all duration-1000" id="hero-background" style="background-size: 120% auto;">
         <!-- Overlay for better text readability -->
         <div class="absolute inset-0 bg-black bg-opacity-40"></div>
@@ -118,15 +118,16 @@
                     <span class="block text-primary-200">en temps réel</span>
                 </h1>
 
-            </div>
-        </div>
-    </div>
+                    </div>
+                    </div>
+                </div>
 
     <!-- Search Form -->
     <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 -mt-4 z-20 relative">
         <div class="bg-white rounded-xl shadow-xl p-6 border border-gray-100">
-            <!-- Trip Type Toggle -->
-            <div class="flex justify-center mb-6">
+                        <!-- Trip Type Toggle -->
+            <div class="flex flex-wrap justify-center items-center gap-4 mb-6">
+                <!-- Trip Type Selection -->
                 <div class="bg-gray-100 rounded-lg p-1 flex">
                     <button type="button" id="round-trip-btn" class="px-4 py-2 rounded-md text-sm font-medium bg-primary-600 text-white transition duration-300">
                         <i class="fas fa-exchange-alt mr-2"></i>Aller-retour
@@ -134,6 +135,25 @@
                     <button type="button" id="one-way-btn" class="px-4 py-2 rounded-md text-sm font-medium text-gray-700 hover:text-gray-900 transition duration-300">
                         <i class="fas fa-arrow-right mr-2"></i>Aller simple
                     </button>
+                    <button type="button" id="multi-destination-btn" class="px-4 py-2 rounded-md text-sm font-medium text-gray-700 hover:text-gray-900 transition duration-300">
+                        <i class="fas fa-map-marked-alt mr-2"></i>Multi-destination
+                    </button>
+                </div>
+                
+                <!-- Economic Class -->
+                <div class="flex items-center space-x-2">
+                    <label class="text-sm font-medium text-gray-700">Classe:</label>
+                    <select class="text-sm border border-gray-300 rounded-md px-3 py-2 focus:ring-primary-500 focus:border-primary-500">
+                        <option value="economique">Économique</option>
+                        <option value="affaires">Affaires</option>
+                        <option value="premiere">Première</option>
+                    </select>
+                </div>
+                
+                <!-- Direct Flights Checkbox -->
+                <div class="flex items-center space-x-2">
+                    <input type="checkbox" id="direct-flights" class="h-4 w-4 text-primary-600 focus:ring-primary-500 border-gray-300 rounded">
+                    <label for="direct-flights" class="text-sm font-medium text-gray-700">Vols directs</label>
                 </div>
             </div>
             
@@ -143,7 +163,7 @@
                     <div class="mt-1 relative rounded-md shadow-sm">
                         <input type="text" id="from" class="focus:ring-primary-500 focus:border-primary-500 block w-full pl-3 pr-10 py-3 border-gray-300 rounded-md" placeholder="Paris (CDG)">
                         <div class="absolute inset-y-0 right-0 pr-3 flex items-center pointer-events-none">
-                            <i class="fas fa-map-marker-alt text-gray-400"></i>
+                            <i class="fas fa-map-marker-alt text-gray-600"></i>
                         </div>
                     </div>
                 </div>
@@ -152,7 +172,7 @@
                     <div class="mt-1 relative rounded-md shadow-sm">
                         <input type="text" id="to" class="focus:ring-primary-500 focus:border-primary-500 block w-full pl-3 pr-10 py-3 border-gray-300 rounded-md" placeholder="New York (JFK)">
                         <div class="absolute inset-y-0 right-0 pr-3 flex items-center pointer-events-none">
-                            <i class="fas fa-map-marker-alt text-gray-400"></i>
+                            <i class="fas fa-map-marker-alt text-gray-600"></i>
                         </div>
                     </div>
                 </div>
@@ -161,7 +181,7 @@
                     <div class="mt-1 relative rounded-md shadow-sm">
                         <input type="date" id="departure" class="focus:ring-primary-500 focus:border-primary-500 block w-full pl-3 pr-10 py-3 border-gray-300 rounded-md">
                         <div class="absolute inset-y-0 right-0 pr-3 flex items-center pointer-events-none">
-                            <i class="fas fa-calendar-alt text-gray-400"></i>
+                            <i class="fas fa-calendar-alt text-gray-600"></i>
                         </div>
                     </div>
                 </div>
@@ -170,7 +190,7 @@
                     <div class="mt-1 relative rounded-md shadow-sm">
                         <input type="date" id="return" class="focus:ring-primary-500 focus:border-primary-500 block w-full pl-3 pr-10 py-3 border-gray-300 rounded-md">
                         <div class="absolute inset-y-0 right-0 pr-3 flex items-center pointer-events-none">
-                            <i class="fas fa-calendar-alt text-gray-400"></i>
+                            <i class="fas fa-calendar-alt text-gray-600"></i>
                         </div>
                     </div>
                 </div>
@@ -178,14 +198,103 @@
                     <label for="passengers" class="block text-sm font-medium text-gray-700 font-display">
                         <i class="fas fa-users mr-2"></i>Passagers
                     </label>
-                    <div class="mt-1 flex items-center bg-white border border-gray-300 rounded-md px-3 py-3">
-                        <button type="button" id="decrease-passengers" class="text-gray-500 hover:text-primary-600 focus:outline-none focus:ring-2 focus:ring-primary-500 rounded-full w-6 h-6 flex items-center justify-center transition duration-200">
-                            <i class="fas fa-minus text-xs"></i>
+                    <div class="mt-1 relative">
+                        <button type="button" id="passengers-dropdown" class="w-full flex items-center justify-between bg-white border border-gray-300 rounded-md px-3 py-3 text-left focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-primary-500">
+                            <span id="passengers-display" class="text-gray-900 font-medium">1 Adulte</span>
+                            <i class="fas fa-chevron-down text-gray-500"></i>
                         </button>
-                        <input type="number" id="passengers" name="passengers" value="1" min="1" max="9" class="w-12 text-center text-gray-900 font-medium mx-2 border-none bg-transparent focus:outline-none focus:ring-0">
-                        <button type="button" id="increase-passengers" class="text-gray-500 hover:text-primary-600 focus:outline-none focus:ring-2 focus:ring-primary-500 rounded-full w-6 h-6 flex items-center justify-center transition duration-200">
-                            <i class="fas fa-plus text-xs"></i>
-                        </button>
+                        
+                        <!-- Passenger Selection Dropdown -->
+                        <div id="passengers-dropdown-menu" class="hidden absolute z-50 w-80 mt-1 bg-white border border-gray-200 rounded-xl shadow-2xl">
+                            <!-- Header -->
+                            <div class="px-6 py-4 border-b border-gray-100 bg-gradient-to-r from-primary-50 to-blue-50 rounded-t-xl">
+                                <h3 class="text-lg font-bold text-gray-900">Passagers</h3>
+                                <p class="text-sm text-gray-600 mt-1">Sélectionnez le nombre de voyageurs</p>
+                            </div>
+                            
+                            <!-- Passenger Categories -->
+                            <div class="p-4 space-y-3">
+                                <!-- Adults -->
+                                <div class="bg-white border border-gray-100 rounded-lg p-4 shadow-sm hover:shadow-md transition-shadow">
+                                    <div class="flex items-center justify-between">
+                                        <div class="flex items-center space-x-3">
+                                            <div class="w-8 h-8 bg-primary-500 rounded-full flex items-center justify-center">
+                                                <i class="fas fa-user text-white text-xs"></i>
+                                            </div>
+                                            <div>
+                                                <h4 class="text-sm font-semibold text-gray-900">Adultes</h4>
+                                                <p class="text-xs text-gray-500">12 ans et plus</p>
+                                            </div>
+                                        </div>
+                                        <div class="flex items-center space-x-2">
+                                            <button type="button" id="decrease-adults" class="w-7 h-7 bg-gray-100 border border-gray-200 rounded-md flex items-center justify-center text-gray-600 hover:bg-gray-200 hover:border-gray-300 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-1 transition-all duration-150 disabled:opacity-40 disabled:cursor-not-allowed">
+                                                <i class="fas fa-minus text-xs"></i>
+                                            </button>
+                                            <span id="adults-count" class="w-8 text-center text-sm font-bold text-gray-900">1</span>
+                                            <button type="button" id="increase-adults" class="w-7 h-7 bg-gray-100 border border-gray-200 rounded-md flex items-center justify-center text-gray-600 hover:bg-gray-200 hover:border-gray-300 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-1 transition-all duration-150">
+                                                <i class="fas fa-plus text-xs"></i>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <!-- Children -->
+                                <div class="bg-white border border-gray-100 rounded-lg p-4 shadow-sm hover:shadow-md transition-shadow">
+                                    <div class="flex items-center justify-between">
+                                        <div class="flex items-center space-x-3">
+                                            <div class="w-8 h-8 bg-blue-500 rounded-full flex items-center justify-center">
+                                                <i class="fas fa-child text-white text-xs"></i>
+                                            </div>
+                                            <div>
+                                                <h4 class="text-sm font-semibold text-gray-900">Enfants</h4>
+                                                <p class="text-xs text-gray-500">2 à 12 ans</p>
+                                            </div>
+                                        </div>
+                                        <div class="flex items-center space-x-2">
+                                            <button type="button" id="decrease-children" class="w-7 h-7 bg-gray-100 border border-gray-200 rounded-md flex items-center justify-center text-gray-600 hover:bg-gray-200 hover:border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-1 transition-all duration-150 disabled:opacity-40 disabled:cursor-not-allowed">
+                                                <i class="fas fa-minus text-xs"></i>
+                                            </button>
+                                            <span id="children-count" class="w-8 text-center text-sm font-bold text-gray-900">0</span>
+                                            <button type="button" id="increase-children" class="w-7 h-7 bg-gray-100 border border-gray-200 rounded-md flex items-center justify-center text-gray-600 hover:bg-gray-200 hover:border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-1 transition-all duration-150">
+                                                <i class="fas fa-plus text-xs"></i>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <!-- Infants -->
+                                <div class="bg-white border border-gray-100 rounded-lg p-4 shadow-sm hover:shadow-md transition-shadow">
+                                    <div class="flex items-center justify-between">
+                                        <div class="flex items-center space-x-3">
+                                            <div class="w-8 h-8 bg-pink-500 rounded-full flex items-center justify-center">
+                                                <i class="fas fa-baby text-white text-xs"></i>
+                                            </div>
+                                            <div>
+                                                <h4 class="text-sm font-semibold text-gray-900">Bébés</h4>
+                                                <p class="text-xs text-gray-500">Moins de 2 ans</p>
+                                            </div>
+                                        </div>
+                                        <div class="flex items-center space-x-2">
+                                            <button type="button" id="decrease-infants" class="w-7 h-7 bg-gray-100 border border-gray-200 rounded-md flex items-center justify-center text-gray-600 hover:bg-gray-200 hover:border-gray-300 focus:outline-none focus:ring-2 focus:ring-pink-500 focus:ring-offset-1 transition-all duration-150 disabled:opacity-40 disabled:cursor-not-allowed">
+                                                <i class="fas fa-minus text-xs"></i>
+                                            </button>
+                                            <span id="infants-count" class="w-8 text-center text-sm font-bold text-gray-900">0</span>
+                                            <button type="button" id="increase-infants" class="w-7 h-7 bg-gray-100 border border-gray-200 rounded-md flex items-center justify-center text-gray-600 hover:bg-gray-200 hover:border-gray-300 focus:outline-none focus:ring-2 focus:ring-pink-500 focus:ring-offset-1 transition-all duration-150">
+                                                <i class="fas fa-plus text-xs"></i>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Footer -->
+                            <div class="px-6 py-4 border-t border-gray-100 bg-gray-50 rounded-b-xl">
+                                <div class="flex items-center justify-between">
+                                    <span class="text-sm font-medium text-gray-700">Total:</span>
+                                    <span id="total-passengers" class="text-lg font-bold text-primary-600">1 passager</span>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -424,16 +533,16 @@
             </div>
 
             <div class="mt-16">
-                <div class="grid grid-cols-1 gap-12 sm:grid-cols-2 lg:grid-cols-3">
+                <div class="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4">
                     <!-- Feature 1 -->
-                    <div class="pt-6">
-                        <div class="flow-root bg-gray-50 rounded-xl px-8 pb-10 h-full card-hover">
-                            <div class="-mt-8">
-                                <div class="flex items-center justify-center h-16 w-16 rounded-full bg-primary-500 text-white shadow-lg mx-auto">
-                                    <i class="fas fa-bolt text-2xl"></i>
+                    <div class="pt-4">
+                        <div class="flow-root bg-gray-50 rounded-xl px-6 pb-8 h-full card-hover">
+                            <div class="-mt-6">
+                                <div class="flex items-center justify-center h-14 w-14 rounded-full bg-primary-500 text-white shadow-lg mx-auto">
+                                    <i class="fas fa-bolt text-xl"></i>
                                 </div>
-                                <h3 class="mt-8 text-lg font-medium text-gray-900 tracking-tight text-center font-display">Recherche en temps réel</h3>
-                                <p class="mt-5 text-base text-gray-500 text-center">
+                                <h3 class="mt-6 text-base font-medium text-gray-900 tracking-tight text-center font-display">Recherche en temps réel</h3>
+                                <p class="mt-4 text-sm text-gray-500 text-center leading-relaxed">
                                     Accédez aux prix des vols actualisés en permanence depuis plus de 200 compagnies aériennes.
                                 </p>
                             </div>
@@ -441,14 +550,14 @@
                     </div>
 
                     <!-- Feature 2 -->
-                    <div class="pt-6">
-                        <div class="flow-root bg-gray-50 rounded-xl px-8 pb-10 h-full card-hover">
-                            <div class="-mt-8">
-                                <div class="flex items-center justify-center h-16 w-16 rounded-full bg-primary-500 text-white shadow-lg mx-auto">
-                                    <i class="fas fa-euro-sign text-2xl"></i>
+                    <div class="pt-4">
+                        <div class="flow-root bg-gray-50 rounded-xl px-6 pb-8 h-full card-hover">
+                            <div class="-mt-6">
+                                <div class="flex items-center justify-center h-14 w-14 rounded-full bg-primary-500 text-white shadow-lg mx-auto">
+                                    <i class="fas fa-euro-sign text-xl"></i>
                                 </div>
-                                <h3 class="mt-8 text-lg font-medium text-gray-900 tracking-tight text-center font-display">Économies garanties</h3>
-                                <p class="mt-5 text-base text-gray-500 text-center">
+                                <h3 class="mt-6 text-base font-medium text-gray-900 tracking-tight text-center font-display">Économies garanties</h3>
+                                <p class="mt-4 text-sm text-gray-500 text-center leading-relaxed">
                                     Nos utilisateurs économisent en moyenne 35% sur leurs billets d'avion grâce à nos comparaisons.
                                 </p>
                             </div>
@@ -456,15 +565,30 @@
                     </div>
 
                     <!-- Feature 3 -->
-                    <div class="pt-6">
-                        <div class="flow-root bg-gray-50 rounded-xl px-8 pb-10 h-full card-hover">
-                            <div class="-mt-8">
-                                <div class="flex items-center justify-center h-16 w-16 rounded-full bg-primary-500 text-white shadow-lg mx-auto">
-                                    <i class="fas fa-shield-alt text-2xl"></i>
+                    <div class="pt-4">
+                        <div class="flow-root bg-gray-50 rounded-xl px-6 pb-8 h-full card-hover">
+                            <div class="-mt-6">
+                                <div class="flex items-center justify-center h-14 w-14 rounded-full bg-primary-500 text-white shadow-lg mx-auto">
+                                    <i class="fas fa-shield-alt text-xl"></i>
                                 </div>
-                                <h3 class="mt-8 text-lg font-medium text-gray-900 tracking-tight text-center font-display">Paiements sécurisés</h3>
-                                <p class="mt-5 text-base text-gray-500 text-center">
+                                <h3 class="mt-6 text-base font-medium text-gray-900 tracking-tight text-center font-display">Paiements sécurisés</h3>
+                                <p class="mt-4 text-sm text-gray-500 text-center leading-relaxed">
                                     Réservation directe avec les compagnies aériennes via nos liens sécurisés.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Feature 4 - Free Service -->
+                    <div class="pt-4">
+                        <div class="flow-root bg-gray-50 rounded-xl px-6 pb-8 h-full card-hover">
+                            <div class="-mt-6">
+                                <div class="flex items-center justify-center h-14 w-14 rounded-full bg-primary-500 text-white shadow-lg mx-auto">
+                                    <i class="fas fa-gift text-xl"></i>
+                                </div>
+                                <h3 class="mt-6 text-base font-medium text-gray-900 tracking-tight text-center font-display">Gratuit et sans frais cachés</h3>
+                                <p class="mt-4 text-sm text-gray-500 text-center leading-relaxed">
+                                    Notre service est 100% gratuit. Vous ne payez aucun frais supplémentaire en utilisant notre plateforme. Le prix que vous voyez est le prix réel proposé par nos partenaires. Pas de surprise au moment du paiement.
                                 </p>
                             </div>
                         </div>
@@ -544,6 +668,8 @@
                          </span>
                      </div>
                 </div>
+
+
             </div>
         </div>
     </div>
@@ -572,31 +698,27 @@
     </div>
 
     <!-- Footer -->
-    <footer class="bg-gray-900">
+    <footer class="bg-white">
         <div class="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:py-16 lg:px-8">
             <div class="xl:grid xl:grid-cols-3 xl:gap-8">
                 <div class="space-y-8 xl:col-span-1">
                     <div class="flex items-center">
                         <img src="logo.png" alt="Choffly Logo" class="h-8 w-8 mr-3">
-                        <span class="text-2xl font-bold text-white font-display">Choffly</span>
+                        <span class="text-2xl font-bold text-gray-900 font-display">Choffly</span>
                     </div>
-                    <p class="text-gray-300 text-base">
+                    <p class="text-gray-600 text-base">
                         Votre comparateur de vols préféré depuis 2020.
                     </p>
                     <div class="flex space-x-6">
-                        <a href="https://www.facebook.com/choffly" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-white transition duration-300">
+                        <a href="https://www.facebook.com/choffly" target="_blank" rel="noopener noreferrer" class="text-gray-600 hover:text-gray-900 transition duration-300">
                             <span class="sr-only">Facebook</span>
                             <i class="fab fa-facebook-f text-xl"></i>
                         </a>
-                        <a href="#" class="text-gray-400 hover:text-white transition duration-300">
-                            <span class="sr-only">Twitter</span>
-                            <i class="fab fa-twitter text-xl"></i>
-                        </a>
-                        <a href="https://www.instagram.com/choffly/" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-white transition duration-300">
+                        <a href="https://www.instagram.com/choffly_dz?igsh=M3R3Zzl5bWp5cWh2" target="_blank" rel="noopener noreferrer" class="text-gray-600 hover:text-gray-900 transition duration-300">
                             <span class="sr-only">Instagram</span>
                             <i class="fab fa-instagram text-xl"></i>
                         </a>
-                        <a href="https://www.tiktok.com/@choffly?is_from_webapp=1&sender_device=pc" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-white transition duration-300">
+                        <a href="https://www.tiktok.com/@choffly_dz?_t=ZS-8yei4x8VXHz&_r=1" target="_blank" rel="noopener noreferrer" class="text-gray-600 hover:text-gray-900 transition duration-300">
                             <span class="sr-only">TikTok</span>
                             <i class="fab fa-tiktok text-xl"></i>
                         </a>
@@ -605,49 +727,49 @@
                 <div class="mt-12 grid grid-cols-2 gap-8 xl:mt-0 xl:col-span-2">
                     <div class="md:grid md:grid-cols-2 md:gap-8">
                         <div>
-                            <h3 class="text-sm font-semibold text-gray-300 tracking-wider uppercase font-display">
+                            <h3 class="text-sm font-semibold text-gray-700 tracking-wider uppercase font-display">
                                 Entreprise
                             </h3>
                             <ul class="mt-4 space-y-4">
                                 <li>
-                                    <a href="about.html" class="text-base text-gray-400 hover:text-white transition duration-300">
+                                    <a href="about.html" class="text-base text-gray-600 hover:text-gray-900 transition duration-300">
                                         À propos
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="#" class="text-base text-gray-400 hover:text-white transition duration-300">
+                                    <a href="#" class="text-base text-gray-600 hover:text-gray-900 transition duration-300">
                                         Blog
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="#" class="text-base text-gray-400 hover:text-white transition duration-300">
+                                    <a href="#" class="text-base text-gray-600 hover:text-gray-900 transition duration-300">
                                         Carrières
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="#" class="text-base text-gray-400 hover:text-white transition duration-300">
+                                    <a href="#" class="text-base text-gray-600 hover:text-gray-900 transition duration-300">
                                         Presse
                                     </a>
                                 </li>
                             </ul>
                         </div>
                         <div class="mt-12 md:mt-0">
-                            <h3 class="text-sm font-semibold text-gray-300 tracking-wider uppercase font-display">
+                            <h3 class="text-sm font-semibold text-gray-700 tracking-wider uppercase font-display">
                                 Légal
                             </h3>
                             <ul class="mt-4 space-y-4">
                                 <li>
-                                    <a href="#" class="text-base text-gray-400 hover:text-white transition duration-300">
+                                    <a href="#" class="text-base text-gray-600 hover:text-gray-900 transition duration-300">
                                         Confidentialité
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="#" class="text-base text-gray-400 hover:text-white transition duration-300">
+                                    <a href="#" class="text-base text-gray-600 hover:text-gray-900 transition duration-300">
                                         Conditions
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="#" class="text-base text-gray-400 hover:text-white transition duration-300">
+                                    <a href="#" class="text-base text-gray-600 hover:text-gray-900 transition duration-300">
                                         Politique cookies
                                     </a>
                                 </li>
@@ -656,52 +778,51 @@
                     </div>
                     <div class="md:grid md:grid-cols-2 md:gap-8">
                         <div>
-                            <h3 class="text-sm font-semibold text-gray-300 tracking-wider uppercase font-display">
+                            <h3 class="text-sm font-semibold text-gray-700 tracking-wider uppercase font-display">
                                 Ressources
                             </h3>
                             <ul class="mt-4 space-y-4">
                                 <li>
-                                    <a href="#" class="text-base text-gray-400 hover:text-white transition duration-300">
+                                    <a href="#" class="text-base text-gray-600 hover:text-gray-900 transition duration-300">
                                         Centre d'aide
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="#" class="text-base text-gray-400 hover:text-white transition duration-300">
+                                    <a href="#" class="text-base text-gray-600 hover:text-gray-900 transition duration-300">
                                         Guides voyage
                                     </li>
                                 <li>
-                                    <a href="#" class="text-base text-gray-400 hover:text-white transition duration-300">
+                                    <a href="#" class="text-base text-gray-600 hover:text-gray-900 transition duration-300">
                                         Avis compagnies
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="#" class="text-base text-gray-400 hover:text-white transition duration-300">
+                                    <a href="#" class="text-base text-gray-600 hover:text-gray-900 transition duration-300">
                                         FAQ
                                     </a>
                                 </li>
                             </ul>
                         </div>
                         <div class="mt-12 md:mt-0">
-                            <h3 class="text-sm font-semibold text-gray-300 tracking-wider uppercase font-display">
+                            <h3 class="text-sm font-semibold text-gray-700 tracking-wider uppercase font-display">
                                 Contact
                             </h3>
                             <ul class="mt-4 space-y-4">
                                 <li class="flex items-start">
-                                    <i class="fas fa-envelope text-gray-400 mt-1 mr-3"></i>
-                                    <a href="mailto:contact@volcomparaison.com" class="text-base text-gray-400 hover:text-white transition duration-300">
-                                        contact@volcomparaison.com
+                                    <i class="fas fa-envelope text-gray-600 mt-1 mr-3"></i>
+                                    <a href="mailto:contact@volcomparaison.com" class="text-base text-gray-600 hover:text-gray-900 transition duration-300">
+                                        contact.choffly@gmail.com                                    </a>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-phone-alt text-gray-600 mt-1 mr-3"></i>
+                                                    <a href="tel:+213771046533" class="text-base text-gray-600 hover:text-gray-900 transition duration-300">
+                    +213 771 04 65 33
                                     </a>
                                 </li>
                                 <li class="flex items-start">
-                                    <i class="fas fa-phone-alt text-gray-400 mt-1 mr-3"></i>
-                                    <a href="tel:+213550768244" class="text-base text-gray-400 hover:text-white transition duration-300">
-                                        +213 550 76 82 44
-                                    </a>
-                                </li>
-                                <li class="flex items-start">
-                                    <i class="fas fa-map-marker-alt text-gray-400 mt-1 mr-3"></i>
-                                    <span class="text-base text-gray-400">
-                                        الجزار العاصمة<br>Algiers, Algeria
+                                    <i class="fas fa-map-marker-alt text-gray-600 mt-1 mr-3"></i>
+                                    <span class="text-base text-gray-600">
+                                        Hussein dey Alger<br>Algeria
                                     </span>
                                 </li>
                             </ul>
@@ -710,36 +831,27 @@
                 </div>
             </div>
             <div class="mt-12 border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center">
-                <p class="text-base text-gray-400 text-center md:text-left">
+                <p class="text-base text-gray-600 text-center md:text-left">
                     &copy; 2023 VolComparaison. Tous droits réservés.
                 </p>
-                <div class="mt-4 md:mt-0 flex space-x-6">
-                    <a href="#" class="text-gray-400 hover:text-white transition duration-300">
-                        <span class="sr-only">App Store</span>
-                        <i class="fab fa-app-store-ios text-2xl"></i>
-                    </a>
-                    <a href="#" class="text-gray-400 hover:text-white transition duration-300">
-                        <span class="sr-only">Google Play</span>
-                        <i class="fab fa-google-play text-2xl"></i>
-                    </a>
-                </div>
+
             </div>
         </div>
          </footer>
 
-    <!-- Floating Comment Button -->
-    <div class="fixed bottom-4 right-4 sm:bottom-8 sm:right-8 z-50">
-        <button id="comment-button" class="bg-primary-600 hover:bg-primary-700 text-white rounded-full p-3 sm:p-4 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-110 focus:outline-none focus:ring-4 focus:ring-primary-300">
-            <i class="fas fa-comment text-lg sm:text-xl"></i>
-        </button>
-    </div>
+            <!-- Floating Comment Button -->
+        <div class="fixed bottom-4 right-2 sm:bottom-6 sm:right-6 z-50">
+            <button id="comment-button" class="bg-primary-600 hover:bg-primary-700 text-white rounded-full p-2 sm:p-2.5 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-110 focus:outline-none focus:ring-2 focus:ring-primary-300">
+                <i class="fas fa-comment text-sm sm:text-base"></i>
+            </button>
+        </div>
 
     <!-- Comment Modal -->
     <div id="comment-modal" class="fixed inset-0 bg-black bg-opacity-50 z-50 hidden flex items-center justify-center p-4">
         <div class="bg-white rounded-lg shadow-xl max-w-md w-full max-h-[80vh] overflow-y-auto">
             <div class="flex justify-between items-center p-6 border-b border-gray-200">
                 <h3 class="text-lg font-semibold text-gray-900 font-display">Ajouter un commentaire</h3>
-                <button id="close-comment-modal" class="text-gray-400 hover:text-gray-600 transition duration-300">
+                <button id="close-comment-modal" class="text-gray-600 hover:text-gray-600 transition duration-300">
                     <i class="fas fa-times text-xl"></i>
                 </button>
             </div>
@@ -794,7 +906,7 @@
                                </button>
                            </div>
                        </div>
-                       <button type="button" id="close-login-invitation-x" class="flex-shrink-0 text-gray-400 hover:text-gray-600 transition duration-300">
+                       <button type="button" id="close-login-invitation-x" class="flex-shrink-0 text-gray-600 hover:text-gray-600 transition duration-300">
                            <i class="fas fa-times text-sm"></i>
                        </button>
                    </div>
@@ -963,23 +1075,34 @@
            document.addEventListener('DOMContentLoaded', function() {
                const roundTripBtn = document.getElementById('round-trip-btn');
                const oneWayBtn = document.getElementById('one-way-btn');
+               const multiDestinationBtn = document.getElementById('multi-destination-btn');
                const returnFieldContainer = document.getElementById('return-field-container');
                const returnInput = document.getElementById('return');
                
                // Set initial state (round trip is default)
-               let isRoundTrip = true;
+               let currentTripType = 'round-trip';
+               
+               // Function to reset all button styles
+               function resetButtonStyles() {
+                   roundTripBtn.classList.remove('bg-primary-600', 'text-white');
+                   roundTripBtn.classList.add('text-gray-700', 'hover:text-gray-900');
+                   
+                   oneWayBtn.classList.remove('bg-primary-600', 'text-white');
+                   oneWayBtn.classList.add('text-gray-700', 'hover:text-gray-900');
+                   
+                   multiDestinationBtn.classList.remove('bg-primary-600', 'text-white');
+                   multiDestinationBtn.classList.add('text-gray-700', 'hover:text-gray-900');
+               }
                
                // Round trip button click
                roundTripBtn.addEventListener('click', function() {
-                   if (!isRoundTrip) {
-                       isRoundTrip = true;
+                   if (currentTripType !== 'round-trip') {
+                       currentTripType = 'round-trip';
                        
                        // Update button styles
+                       resetButtonStyles();
                        roundTripBtn.classList.remove('text-gray-700', 'hover:text-gray-900');
                        roundTripBtn.classList.add('bg-primary-600', 'text-white');
-                       
-                       oneWayBtn.classList.remove('bg-primary-600', 'text-white');
-                       oneWayBtn.classList.add('text-gray-700', 'hover:text-gray-900');
                        
                        // Show return field
                        returnFieldContainer.style.display = 'block';
@@ -989,20 +1112,38 @@
                
                // One way button click
                oneWayBtn.addEventListener('click', function() {
-                   if (isRoundTrip) {
-                       isRoundTrip = false;
+                   if (currentTripType !== 'one-way') {
+                       currentTripType = 'one-way';
                        
                        // Update button styles
+                       resetButtonStyles();
                        oneWayBtn.classList.remove('text-gray-700', 'hover:text-gray-900');
                        oneWayBtn.classList.add('bg-primary-600', 'text-white');
-                       
-                       roundTripBtn.classList.remove('bg-primary-600', 'text-white');
-                       roundTripBtn.classList.add('text-gray-700', 'hover:text-gray-900');
                        
                        // Hide return field
                        returnFieldContainer.style.display = 'none';
                        returnInput.required = false;
                        returnInput.value = '';
+                   }
+               });
+               
+               // Multi-destination button click
+               multiDestinationBtn.addEventListener('click', function() {
+                   if (currentTripType !== 'multi-destination') {
+                       currentTripType = 'multi-destination';
+                       
+                       // Update button styles
+                       resetButtonStyles();
+                       multiDestinationBtn.classList.remove('text-gray-700', 'hover:text-gray-900');
+                       multiDestinationBtn.classList.add('bg-primary-600', 'text-white');
+                       
+                       // Hide return field for multi-destination
+                       returnFieldContainer.style.display = 'none';
+                       returnInput.required = false;
+                       returnInput.value = '';
+                       
+                       // Show multi-destination message (you can customize this)
+                       alert('Fonctionnalité multi-destination à implémenter');
                    }
                });
            });
@@ -1032,37 +1173,146 @@
                setInterval(changeBackground, 3000);
            });
 
-           // Passenger count functionality
+           // Passenger selection functionality
            document.addEventListener('DOMContentLoaded', function() {
-               const decreaseBtn = document.getElementById('decrease-passengers');
-               const increaseBtn = document.getElementById('increase-passengers');
-               const passengersInput = document.getElementById('passengers');
+               const passengersDropdown = document.getElementById('passengers-dropdown');
+               const passengersDropdownMenu = document.getElementById('passengers-dropdown-menu');
+               const passengersDisplay = document.getElementById('passengers-display');
                
-               // Decrease passengers
-               decreaseBtn.addEventListener('click', function() {
-                   let currentValue = parseInt(passengersInput.value);
-                   if (currentValue > 1) {
-                       passengersInput.value = currentValue - 1;
+               // Passenger counts
+               let adultsCount = 1;
+               let childrenCount = 0;
+               let infantsCount = 0;
+               
+               // Elements
+               const adultsCountSpan = document.getElementById('adults-count');
+               const childrenCountSpan = document.getElementById('children-count');
+               const infantsCountSpan = document.getElementById('infants-count');
+               
+               const decreaseAdults = document.getElementById('decrease-adults');
+               const increaseAdults = document.getElementById('increase-adults');
+               const decreaseChildren = document.getElementById('decrease-children');
+               const increaseChildren = document.getElementById('increase-children');
+               const decreaseInfants = document.getElementById('decrease-infants');
+               const increaseInfants = document.getElementById('increase-infants');
+               
+               // Toggle dropdown
+               passengersDropdown.addEventListener('click', function(e) {
+                   e.preventDefault();
+                   passengersDropdownMenu.classList.toggle('hidden');
+               });
+               
+               // Close dropdown when clicking outside
+               document.addEventListener('click', function(e) {
+                   if (!passengersDropdown.contains(e.target) && !passengersDropdownMenu.contains(e.target)) {
+                       passengersDropdownMenu.classList.add('hidden');
                    }
                });
                
-               // Increase passengers
-               increaseBtn.addEventListener('click', function() {
-                   let currentValue = parseInt(passengersInput.value);
-                   if (currentValue < 9) {
-                       passengersInput.value = currentValue + 1;
+                               // Update display text and total
+                function updateDisplay() {
+                    let displayText = '';
+                    if (adultsCount > 0) {
+                        displayText += adultsCount + (adultsCount === 1 ? ' Adulte' : ' Adultes');
+                    }
+                    if (childrenCount > 0) {
+                        if (displayText) displayText += ', ';
+                        displayText += childrenCount + (childrenCount === 1 ? ' Enfant' : ' Enfants');
+                    }
+                    if (infantsCount > 0) {
+                        if (displayText) displayText += ', ';
+                        displayText += infantsCount + (infantsCount === 1 ? ' Bébé' : ' Bébés');
+                    }
+                    passengersDisplay.textContent = displayText || '1 Adulte';
+                    
+                    // Update total passengers with proper formatting
+                    const totalPassengers = adultsCount + childrenCount + infantsCount;
+                    const totalElement = document.getElementById('total-passengers');
+                    if (totalPassengers === 1) {
+                        totalElement.textContent = '1 passager';
+                    } else {
+                        totalElement.textContent = totalPassengers + ' passagers';
+                    }
+                    
+                    // Update button states
+                    updateButtonStates();
+                }
+                
+                // Update button states (disable when at min/max)
+                function updateButtonStates() {
+                    const decreaseAdultsBtn = document.getElementById('decrease-adults');
+                    const increaseAdultsBtn = document.getElementById('increase-adults');
+                    const decreaseChildrenBtn = document.getElementById('decrease-children');
+                    const increaseChildrenBtn = document.getElementById('increase-children');
+                    const decreaseInfantsBtn = document.getElementById('decrease-infants');
+                    const increaseInfantsBtn = document.getElementById('increase-infants');
+                    
+                    // Adults (min 1, max 9)
+                    decreaseAdultsBtn.disabled = adultsCount <= 1;
+                    increaseAdultsBtn.disabled = adultsCount >= 9;
+                    
+                    // Children (min 0, max 9)
+                    decreaseChildrenBtn.disabled = childrenCount <= 0;
+                    increaseChildrenBtn.disabled = childrenCount >= 9;
+                    
+                    // Infants (min 0, max 9)
+                    decreaseInfantsBtn.disabled = infantsCount <= 0;
+                    increaseInfantsBtn.disabled = infantsCount >= 9;
+                }
+               
+               // Adults controls
+               decreaseAdults.addEventListener('click', function() {
+                   if (adultsCount > 1) {
+                       adultsCount--;
+                       adultsCountSpan.textContent = adultsCount;
+                       updateDisplay();
                    }
                });
                
-               // Handle direct input
-               passengersInput.addEventListener('input', function() {
-                   let value = parseInt(this.value);
-                   if (value < 1) {
-                       this.value = 1;
-                   } else if (value > 9) {
-                       this.value = 9;
+               increaseAdults.addEventListener('click', function() {
+                   if (adultsCount < 9) {
+                       adultsCount++;
+                       adultsCountSpan.textContent = adultsCount;
+                       updateDisplay();
                    }
                });
+               
+               // Children controls
+               decreaseChildren.addEventListener('click', function() {
+                   if (childrenCount > 0) {
+                       childrenCount--;
+                       childrenCountSpan.textContent = childrenCount;
+                       updateDisplay();
+                   }
+               });
+               
+               increaseChildren.addEventListener('click', function() {
+                   if (childrenCount < 9) {
+                       childrenCount++;
+                       childrenCountSpan.textContent = childrenCount;
+                       updateDisplay();
+                   }
+               });
+               
+               // Infants controls
+               decreaseInfants.addEventListener('click', function() {
+                   if (infantsCount > 0) {
+                       infantsCount--;
+                       infantsCountSpan.textContent = infantsCount;
+                       updateDisplay();
+                   }
+               });
+               
+               increaseInfants.addEventListener('click', function() {
+                   if (infantsCount < 9) {
+                       infantsCount++;
+                       infantsCountSpan.textContent = infantsCount;
+                       updateDisplay();
+                   }
+               });
+               
+               // Initialize display
+               updateDisplay();
            });
 
                   // Login invitation notification functionality
@@ -1100,7 +1350,7 @@
                    loginInvitationModal.classList.add('hidden');
                }
            }, 10000); // Auto-hide after 10 seconds
-       });
+         });
      </script>
  </body>
  </html>
